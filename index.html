@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21点小游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>21点小游戏</h1>
+        
+        <div class="game-area">
+            <div class="dealer-area">
+                <h2>庄家</h2>
+                <div id="dealer-cards" class="cards"></div>
+                <div id="dealer-score" class="score">点数: 0</div>
+            </div>
+            
+            <div class="player-area">
+                <h2>玩家</h2>
+                <div id="player-cards" class="cards"></div>
+                <div id="player-score" class="score">点数: 0</div>
+            </div>
+            
+            <div id="game-result" class="game-result"></div>
+            
+            <div class="controls">
+                <button id="deal-btn">发牌</button>
+                <button id="hit-btn" disabled>要牌</button>
+                <button id="stand-btn" disabled>停牌</button>
+                <button id="restart-btn" disabled>重新开始</button>
+            </div>
+        </div>
+        
+        <div class="rules">
+            <h3>游戏规则</h3>
+            <p>1. 玩家和庄家各发两张牌，庄家的第一张牌是暗牌</p>
+            <p>2. 牌面数字2-10的牌按牌面点数计算，J、Q、K按10点计算，A可记为1点或11点</p>
+            <p>3. 玩家可以选择要牌(Hit)或停牌(Stand)</p>
+            <p>4. 玩家点数超过21点则爆牌，游戏结束</p>
+            <p>5. 庄家点数小于17时必须要牌，大于等于17时必须停牌</p>
+            <p>6. 庄家爆牌，玩家获胜；双方都不爆牌，点数大者获胜；点数相同，平局</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
